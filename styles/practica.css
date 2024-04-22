@@ -3,7 +3,7 @@ body {
   font-size: 15px;
   font-weight: 300;
   color: #282d72;
-  font-family: "Lexend", Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   margin: 0;
 }
 body img {
@@ -13,7 +13,7 @@ body img {
 .header {
   width: 100%;
   padding: 20px 50px;
-  background-color: #f3f3f3;
+  background-color: #5e77e7;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,6 +75,7 @@ body img {
 .banner p {
   margin: 0 auto;
   font-size: 25px;
+  font-weight: 600;
   opacity: 0.7;
 }
 
