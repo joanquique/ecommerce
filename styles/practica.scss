@@ -120,6 +120,7 @@ body {
     width: 100%;
     max-width: 450px;
     background-color: #fff;
+    font-family: $font-family; //Agregado para probar el PR
     padding: 25px;
     box-sizing: border-box;
     position: fixed;
