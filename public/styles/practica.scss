@@ -117,6 +117,69 @@ body {
     margin-bottom: 15px;
 }
 
+.menu {
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: -100%; 
+    z-index: 100;
+    transition: left 0.5s ease; 
+}
+
+.menu--open {
+    left: 0; 
+}
+
+.menu__close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.5); 
+    }
+}
+
+.menu__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+
+            &:hover {
+                color: #ff0000; // Cambia el color al pasar el mouse sobre los enlaces
+            }
+        }
+    }
+}
+
+.menu__title {
+    display: block;
+    width: 100%; //Asegurarse de que el título ocupe todo el ancho disponible
+    text-align: center; // Alinea el texto al centro
+}
+
+
 .cart {
     width: 100%;
     max-width: 450px;
@@ -168,11 +231,11 @@ body {
 }
 
 .cart--open {
-    right: 0; /* Cambiamos el valor de right para mostrar el carrito */
+    right: 0; 
 }
 
+//Estilos del icono de cerrar (X) en el carrito
 .cart__close-icon {
-    /* Estilos del icono de cerrar (X) en el carrito... */
     position: absolute;
     top: 10px;
     right: 10px;
@@ -188,12 +251,10 @@ body {
 
 #menu-toggle,
 #cart-toggle {
-    /* Estilos de los iconos de menú y carrito en el encabezado... */
     cursor: pointer;
 }
 
 .cart__item-delete-icon {
-    /* Estilos del ícono de quitar en los elementos del carrito... */
     width: 25px;
     cursor: pointer;
     transition: transform 0.2s ease;

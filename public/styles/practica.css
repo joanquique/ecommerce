@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   width: 100%;
   font-size: 15px;
@@ -87,6 +86,63 @@ body img {
   margin-bottom: 15px;
 }
 
+.menu {
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: -100%;
+  z-index: 100;
+  transition: left 0.5s ease;
+}
+
+.menu--open {
+  left: 0;
+}
+
+.menu__close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.menu__close-icon:hover {
+  transform: scale(1.5);
+}
+
+.menu__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.menu__list ul {
+  padding: 0;
+  margin: 0;
+}
+.menu__list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.menu__list li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+.menu__list li a:hover {
+  color: #ff0000;
+}
+
+.menu__title {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 .cart {
   width: 100%;
   max-width: 450px;
@@ -132,11 +188,10 @@ body img {
 }
 
 .cart--open {
-  right: 0; /* Cambiamos el valor de right para mostrar el carrito */
+  right: 0;
 }
 
 .cart__close-icon {
-  /* Estilos del icono de cerrar (X) en el carrito... */
   position: absolute;
   top: 10px;
   right: 10px;
@@ -151,12 +206,10 @@ body img {
 
 #menu-toggle,
 #cart-toggle {
-  /* Estilos de los iconos de menú y carrito en el encabezado... */
   cursor: pointer;
 }
 
 .cart__item-delete-icon {
-  /* Estilos del ícono de quitar en los elementos del carrito... */
   width: 25px;
   cursor: pointer;
   transition: transform 0.2s ease;
