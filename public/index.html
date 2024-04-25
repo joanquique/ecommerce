@@ -7,13 +7,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/practica.css">
+    <script src="js/functions.js" async></script>
     <title>Tienda Adidas</title>
 </head>
 <body>
     <header class="header">
-        <i class="header__icon"><img src="img/menu.png" alt="Icono Menu" width="25"></i>
+        <i class="header__icon" id="menu-toggle"><img src="img/menu.png" alt="Icono Menu" width="25"></i>
         <img src="img/Adidas_Logo.png" alt="Logo Adidas" class="header__logo" width="100">
-        <i class="header__icon"><img src="img/carrito.png" alt="Icono Carrito" width="30"></i>
+        <i class="header__icon" id="cart-toggle"><img src="img/carrito.png" alt="Icono Carrito" width="30"></i>
     </header>
     
     <main>
@@ -98,6 +99,7 @@
 
         <section class="cart cart--container">
             <h2 class="cart__title">CARRITO</h2>
+            <i id="cart-close"><img src="img/x.svg" class="cart__close-icon" alt="Icono Cerrar" width="25"></i> 
             <div class="cart__item">
                 <img src="img/chamarra.jpg" alt="Chamarra">
                 <p class="cart__item-name">Chamarra</p>
