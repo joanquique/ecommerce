@@ -145,7 +145,7 @@ body {
         box-sizing: border-box;
 
         img {
-            width: 40px;
+            width: 15%;
         }
 
         p:nth-child(3) {
@@ -153,7 +153,13 @@ body {
         }
 
         .cart__item-delete-icon {
-            width: 30px;
+            width: 25px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scale(1.1); 
+            }
         }
     }
 }
