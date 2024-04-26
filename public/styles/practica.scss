@@ -84,6 +84,26 @@ body {
     p {
         @include text-styles;
     }
+    .add-to-cart {
+        background-color: #c92929;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border-radius: 20px;
+
+        &:hover {
+            background-color: #cc0000;
+        }
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.1); 
+        }
+    }
 }
 
 .banner {
@@ -138,7 +158,7 @@ body {
     top: 10px;
     right: 10px;
     width: 25px;
-    padding: 1rem;
+    padding: 0.75rem 0.75rem;
     cursor: pointer;
     transition: transform 0.2s ease;
 
@@ -175,10 +195,9 @@ body {
 
 .menu__title {
     display: block;
-    width: 100%; //Asegurarse de que el título ocupe todo el ancho disponible
-    text-align: center; // Alinea el texto al centro
+    width: 100%; 
+    text-align: center;
 }
-
 
 .cart {
     width: 100%;
@@ -190,6 +209,8 @@ body {
     position: fixed;
     right: -100%;
     top: 100px;
+    bottom: 0; //Ajusta el contenedor del carrito para que ocupe toda la altura de la ventana gráfica
+    overflow-y: auto; //Agrega un desplazamiento vertical si el contenido excede la altura del contenedor
     box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
     z-index: 99; // Asegura que el carrito esté detrás del header
     transition: right 0.5s ease;
@@ -234,7 +255,18 @@ body {
     right: 0; 
 }
 
-//Estilos del icono de cerrar (X) en el carrito
+.cart__badge {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    background-color: red;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+
 .cart__close-icon {
     position: absolute;
     top: 10px;
@@ -255,7 +287,7 @@ body {
 }
 
 .cart__item-delete-icon {
-    width: 25px;
+    width: 250px;
     cursor: pointer;
     transition: transform 0.2s ease;
 

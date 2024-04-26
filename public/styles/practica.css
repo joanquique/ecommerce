@@ -56,6 +56,24 @@ body img {
   font-size: 17px;
   margin-bottom: 5px;
 }
+.products .add-to-cart {
+  background-color: #c92929;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.products .add-to-cart:hover {
+  background-color: #cc0000;
+}
+.products .add-to-cart:hover {
+  transform: scale(1.1);
+}
 
 .banner {
   width: 100%;
@@ -107,7 +125,7 @@ body img {
   top: 10px;
   right: 10px;
   width: 25px;
-  padding: 1rem;
+  padding: 0.75rem 0.75rem;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -153,6 +171,8 @@ body img {
   position: fixed;
   right: -100%;
   top: 100px;
+  bottom: 0;
+  overflow-y: auto;
   box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
   z-index: 99;
   transition: right 0.5s ease;
@@ -191,6 +211,17 @@ body img {
   right: 0;
 }
 
+.cart__badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
 .cart__close-icon {
   position: absolute;
   top: 10px;
@@ -210,7 +241,7 @@ body img {
 }
 
 .cart__item-delete-icon {
-  width: 25px;
+  width: 250px;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
