@@ -209,8 +209,8 @@ body {
     position: fixed;
     right: -100%;
     top: 100px;
-    bottom: 0; //Ajusta el contenedor del carrito para que ocupe toda la altura de la ventana gráfica
-    overflow-y: auto; //Agrega un desplazamiento vertical si el contenido excede la altura del contenedor
+    bottom: 0; // Ajusta la altura del contenedor del carrito
+    overflow-y: auto; // Desplazamiento vertical si el contenido excede la altura del contenedor
     box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
     z-index: 99; // Asegura que el carrito esté detrás del header
     transition: right 0.5s ease;
