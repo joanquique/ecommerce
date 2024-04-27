@@ -50,8 +50,7 @@ function addToCart(name, price, imgSrc) {
 
     // Botón para eliminar el producto del carrito
     const deleteIcon = document.createElement('i');
-    deleteIcon.classList.add('cart__item-delete-icon');
-    deleteIcon.innerHTML = `<img src="img/quitar.png" alt="Icono Quitar">`;
+    deleteIcon.innerHTML = `<img src="img/quitar.png" class="cart__item-delete-icon" alt="Icono Quitar">`;
     deleteIcon.addEventListener('click', () => {
         cartItem.remove(); // Elimina el elemento del carrito
         updateCartItemCount(-1); // Disminuye el contador de productos
