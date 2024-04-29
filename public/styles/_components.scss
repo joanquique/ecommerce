@@ -1,0 +1,159 @@
+.menu {
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: -100%;
+    z-index: 100;
+    transition: left 0.5s ease;
+
+    &--open {
+        left: 0;
+    }
+
+    &__close-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 25px;
+        padding: 0.75rem 0.75rem;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+
+            a {
+                text-decoration: none;
+                color: #333;
+                font-size: 18px;
+
+                &:hover {
+                    color: #ff0000;
+                }
+            }
+        }
+    }
+
+    &__title {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.cart {
+    width: 100%;
+    max-width: 450px;
+    background-color: #fff;
+    font-family: $font-family;
+    padding: 25px;
+    box-sizing: border-box;
+    position: fixed;
+    right: -100%;
+    top: 100px;
+    bottom: 0;
+    overflow-y: auto;
+    box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    transition: right 0.5s ease;
+
+    &--open {
+        right: 0;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        padding: 25px 0;
+        box-sizing: border-box;
+    }
+
+    &__item {
+        border-bottom: 1px solid #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        box-sizing: border-box;
+
+        img {
+            width: 15%;
+        }
+
+        p:nth-child(3) {
+            font-weight: $font-weight-light;
+        }
+
+        .cart__item-delete-icon {
+            width: 20px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.cart__badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.cart__close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+.toggle {
+    &--menu,
+    &--cart {
+        cursor: pointer;
+    }
+}
+
+.cart__item-delete-icon {
+    width: 250px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

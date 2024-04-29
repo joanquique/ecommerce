@@ -1,0 +1,33 @@
+$color-primary: #282d72;
+$color-background: #5e77e7;
+$color-text: #282d72;
+
+$font-family: "Montserrat", Arial, Helvetica, sans-serif;
+
+$font-size-base: 15px;
+$font-weight-light: 300;
+$font-weight-normal: 500;
+$font-weight-bold: 600;
+
+// Mixin para botón
+@mixin button-styles {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+// Mixin para texto
+@mixin text-styles {
+    font-weight: $font-weight-normal;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+// Placeholder para imágenes de artículos
+%product-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+}
